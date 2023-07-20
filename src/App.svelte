@@ -6,8 +6,8 @@
 
 <style lang="scss">
 
-	div.q{border:.25rem solid purple;}
-	h1{color:purple;}
+	div.q{ border:.25rem solid purple;}
+	h1{ color:purple;}
 
 </style>
 

@@ -1,4 +1,3 @@
-// rollup.config.js
 import svelte from 'rollup-plugin-svelte';
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
@@ -15,15 +14,14 @@ export default {
     sourcemap: true,
     format: 'iife',
     name: 'app',
-    file: 'public/bundle.js',
+    file: 'public/bundle.js'
   },
   plugins: [
     svelte({
       preprocess: sveltePreprocess({
-        // Use svelte-preprocess here with options
         sourceMap: !production,
         scss: {
-         // includePaths: ['public/css'], Optional, specify the include paths for scss files
+          includePaths: ['src'], // Optional, specify the include paths for scss files
         },
         postcss: {
           plugins: [require('autoprefixer')], // Optional, use autoprefixer for CSS
@@ -31,13 +29,13 @@ export default {
       }),
       compilerOptions: {
         // Enable CSS module support
-        css: true,
-      },
+        css: true
+      }
     }),
 
     resolve({
       browser: true,
-      dedupe: ['svelte'],
+      dedupe: ['svelte']
     }),
     commonjs(),
 
@@ -47,10 +45,9 @@ export default {
 
     // If we're building for production (npm run build
     // instead of npm run dev), minify
-    production && terser(),
+    production && terser()
   ],
   watch: {
-    clearScreen: false,
-  },
+    clearScreen: false
+  }
 };
-
