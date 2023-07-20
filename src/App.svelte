@@ -6,12 +6,7 @@
 
 <style lang="scss">
 
-	div.q{background:linear-gradient(
-		-45deg,
-		 #346 20%,
-		 #0000 50%,
-		#788 80%);
-		}
+	div.q{border:.25rem solid purple;}
 	h1{color:purple;}
 
 </style>
