@@ -1,0 +1,21 @@
+{
+  "name": "chat-help-svelte-sass-rollup-build",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "rollup -c",
+    "watch": "rollup -c -w",
+    "dev": "run-p start:dev autobuild",
+    "start": "sirv public",
+    "start:dev": "sirv public --dev",
+    "compile:scss": "sass --watch src/scss/main.scss:public/css/main.css"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.3",
+    "@rollup/plugin-node-resolve": "^15.1.0",
+    "rollup-plugin-livereload": "^2.0.5",
+    "rollup-plugin-svelte": "^7.1.6",
+    "rollup-plugin-terser": "^7.0.2",
+    "sass": "^1.64.0",
+    "svelte-preprocess": "^5.0.4"
+  }
+}

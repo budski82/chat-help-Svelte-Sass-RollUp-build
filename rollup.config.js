@@ -23,7 +23,7 @@ export default {
         // Use svelte-preprocess here with options
         sourceMap: !production,
         scss: {
-          includePaths: ['src/styles'], // Optional, specify the include paths for scss files
+          includePaths: ['public/css'], // Optional, specify the include paths for scss files
         },
         postcss: {
           plugins: [require('autoprefixer')], // Optional, use autoprefixer for CSS
